@@ -1,0 +1,93 @@
+<web-app>
+    <!-- General description of your Web application -->
+    <display-name>
+        Welcome to the Summer 2022 Project 3 Enterprise Database System
+    </display-name>
+
+    <description>
+        A Servlet/JSP-based Multi-tiered Enterprise Application Using a Tomcat Container.
+    </description>
+
+    <!-- Servlet definitions and mappings -->
+    <servlet>
+        <servlet-name>RootUserApp</servlet-name>
+        <description>Servlet that handles SQL commands from a root-level user.</description>
+        <servlet-class>RootUserApp</servlet-class>
+        <init-param>
+            <param-name>databaseDriver</param-name>
+            <param-value>com.mysql.cj.jdbc.Driver</param-value>
+        </init-param>
+        <init-param>
+            <param-name>databaseName</param-name>
+            <param-value>jdbc:mysql://localhost:3306/project3</param-value>
+        </init-param>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>Flower19810908@</param-value>
+        </init-param>
+  </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RootUserApp</servlet-name>
+        <url-pattern>/RootUserApp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ClientUserApp</servlet-name>
+        <description>Servlet that handles sql commands from a client-level user.</description>
+        <servlet-class>ClientUserApp</servlet-class>
+        <init-param>
+            <param-name>databaseDriver</param-name>
+            <param-value>com.mysql.cj.jdbc.Driver</param-value>
+        </init-param>
+        <init-param>
+            <param-name>databaseName</param-name>
+            <param-value>jdbc:mysql://localhost:3306/project3</param-value>
+        </init-param>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>client</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>client</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ClientUserApp</servlet-name>
+        <url-pattern>/ClientUserApp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DataEntryUserApp</servlet-name>
+        <description>Servlet that handles sql commands from a client-level user.</description>
+        <servlet-class>DataEntryUserApp</servlet-class>
+        <init-param>
+            <param-name>databaseDriver</param-name>
+            <param-value>com.mysql.cj.jdbc.Driver</param-value>
+        </init-param>
+        <init-param>
+            <param-name>databaseName</param-name>
+            <param-value>jdbc:mysql://localhost:3306/project3</param-value>
+        </init-param>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>dataentry</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>dataentry</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DataEntryUserApp</servlet-name>
+        <url-pattern>/DataEntryUserApp</url-pattern>
+    </servlet-mapping>
+
+</web-app>
